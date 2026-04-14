@@ -2,7 +2,7 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'secret123', {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: '30d',
   });
 };
@@ -54,6 +54,13 @@ const registerAdmin = async (req, res) => {
   const normalizedEmail = email?.trim().toLowerCase();
 
   try {
+    const adminCount = await User.countDocuments({ role: 'admin' });
+    const setupKey = req.headers['x-admin-setup-key'];
+
+    if (adminCount > 0 && (!process.env.ADMIN_SETUP_KEY || setupKey !== process.env.ADMIN_SETUP_KEY)) {
+      return res.status(403).json({ message: 'Admin registration is restricted.' });
+    }
+
     const userExists = await User.findOne({
       $or: [
         { email: normalizedEmail },

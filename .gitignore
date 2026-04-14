@@ -47,3 +47,7 @@ Thumbs.db
 # Package manager caches
 .npm/
 .pnpm-store/
+
+
+
+.npm-cache/
