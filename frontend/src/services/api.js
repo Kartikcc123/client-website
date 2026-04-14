@@ -1,7 +1,13 @@
 import axios from 'axios';
 
+const baseURL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV
+    ? 'http://localhost:5000/api'
+    : 'https://client-website-backend.onrender.com/api');
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Pointing to local Express backend
+  baseURL,
   headers: {
     'Content-Type': 'application/json'
   }
