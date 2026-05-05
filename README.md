@@ -230,3 +230,42 @@ This creates:
 ## Author
 
 Built for the Academic Plus management and student learning workflow.
+
+## Recent Enhancements (automated)
+
+- Backend: added `helmet` (security headers) and `compression` (gzip responses) middleware in `backend/index.js`.
+- Frontend: improved SEO meta tags in `frontend/index.html` and added a keyboard `skip-link` for accessibility.
+- Build: updated `frontend/vite.config.js` to split vendor chunks for better caching.
+- Dev tooling: added Prettier config (`.prettierrc`) and `format` scripts in `frontend/package.json` and `backend/package.json`.
+
+To apply new dependencies and run locally:
+
+1. Install backend deps and start:
+
+```bash
+cd backend
+npm install
+node index.js
+```
+
+2. Install frontend deps and start dev server:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+3. Formatting and linting:
+
+```bash
+cd frontend
+npm run format
+npm run lint
+
+cd ../backend
+npm run format
+npm run lint
+```
+
+If you want, I can add pre-commit hooks (husky) and automate the install steps next.

@@ -37,3 +37,24 @@ body {
   background-color: rgba(37, 99, 235, 0.18);
   color: #0f172a;
 }
+
+/* Accessible skip link: visible on focus */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  left: auto;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: #0369a1;
+  color: white;
+  z-index: 9999;
+  border-radius: 4px;
+}

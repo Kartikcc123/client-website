@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "pwa:assets": "node tools/generate-pwa-assets.js",
+    "build": "npm run pwa:assets && vite build",
     "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +19,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-icons": "^5.6.0",
+    "react-is": "^19.2.5",
     "react-router-dom": "^7.14.0",
     "recharts": "^3.8.1"
   },
@@ -32,7 +35,10 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "postcss": "^8.5.8",
+    "prettier": "^2.8.8",
+    "sharp": "^0.32.1",
     "tailwindcss": "^4.2.2",
-    "vite": "^8.0.1"
+    "vite": "^8.0.1",
+    "vite-plugin-pwa": "^1.2.0"
   }
 }

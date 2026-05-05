@@ -2,12 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const helmet = require('helmet');
+const compression = require('compression');
 
 dotenv.config();
 
 const app = express();
 
 // Middleware
+app.use(helmet());
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); // For serving uploaded files

@@ -80,16 +80,7 @@ const AdminLayout = () => {
         />
       </div>
 
-      <div className="px-4 pt-6">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-4 text-slate-200">
-            <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-amber-200">
-            <Sparkles className="h-4 w-4" /> Operations Snapshot
-          </div>
-          <p className="text-sm leading-relaxed text-slate-300/90">
-            Keep pharmacy admissions, course delivery, attendance, and academic records aligned from one workspace.
-          </p>
-        </div>
-      </div>
+
 
       <nav className="flex-1 space-y-2 overflow-y-auto px-4 py-6">
         {navItems.map(({ path, label, icon: Icon }) => (
@@ -98,6 +89,15 @@ const AdminLayout = () => {
           </Link>
         ))}
       </nav>
+
+      <div className="border-t border-white/10 p-4 shrink-0">
+        <button
+          onClick={handleLogout}
+          className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 font-medium text-slate-300 transition duration-200 hover:bg-red-500/10 hover:text-red-400"
+        >
+          <LogOut className="h-5 w-5" /> Logout
+        </button>
+      </div>
     </>
   );
 
