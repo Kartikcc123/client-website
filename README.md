@@ -1,131 +1,111 @@
-<!-- Creative README: enhanced with animated/3D demo suggestions -->
+<div align="center">
+ 🚀 Academic Plus
+ Modern Student Management & Learning Platform
+<img src="assets/readme-banner.gif" width="100%" />
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=3000&color=00F7FF&center=true&vCenter=true&width=800&lines=Modern+Student+Management+Platform;Built+with+MERN+Stack;Animated+UI+%2B+Admin+Dashboard;Smart+Learning+Experience)
+![GitHub stars](https://img.shields.io/github/stars/Kartikcc123/client-website?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Kartikcc123/client-website?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Kartikcc123/client-website?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Kartikcc123/client-website?style=for-the-badge)
+</div>
 
-# Academic Plus ✨
+ 🌟 About The Project
+Academic Plus is a futuristic **Student Management & Learning Platform** designed for schools, institutes, coaching centers, and educational organizations.
 
-A modern student-management and learning platform with a public website, admin panel, and student portal — now presented with a creative README that highlights interactive 3D/animated demo ideas and quick previews you can run locally.
+✨ Public Educational Website  
+✨ Powerful Admin Dashboard  
+✨ Student Portal  
+✨ Attendance Management  
+✨ Results & Performance Tracking  
+✨ Study Materials Management  
+✨ Fee Tracking System  
+✨ Animated Modern UI  
 
-![Hero GIF placeholder](assets/readme-hero.gif)
+ 🖼️ Project Preview
+<div align="center">
 
-Why this README is different
-- It shows quick, copyable 3D animation snippets you can preview locally.
-- It suggests lightweight options (CSS 3D) and richer options (Three.js / Lottie) to enhance your docs and demos.
-- It keeps the full project reference and run instructions below.
+| Landing Page | Admin Dashboard | Student Portal |
+|---|---|---|
+| ![](assets/home.png) | ![](assets/admin.png) | ![](assets/student.png) |
 
----
+</div>
 
-## Animated Preview — Try a CSS 3D cube locally
+ ⚡ Core Features
+ 🎓 Student Features
+- 📚 Access study materials
+- 📅 Check attendance
+- 📊 View results & performance
+- 💳 Payment tracking
+- 🔔 Notifications & updates
+- 👨‍🎓 Student profile management
 
-Create a file `readme-demo.html` and paste this snippet to see a fast, CSS-only 3D cube (works in any modern browser):
+ 🛠️ Admin Features
+- 👨‍💼 Manage students
+- 📚 Upload learning materials
+- 📊 Attendance control
+- 📝 Publish results
+- 💰 Fee management
+- 📢 Send notifications
+- 🏫 Course management
 
-```html
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title>CSS 3D Cube Demo</title>
-	<style>
-		body{display:grid;place-items:center;height:100vh;margin:0;background:#0f172a;color:#e6edf3}
-		.scene{width:200px;height:200px;perspective:800px}
-		.cube{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:spin 6s linear infinite}
-		.face{position:absolute;width:200px;height:200px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;border:2px solid rgba(255,255,255,0.06)}
-		.front{transform:translateZ(100px);background:linear-gradient(135deg,#7c3aed,#06b6d4)}
-		.back{transform:rotateY(180deg) translateZ(100px);background:linear-gradient(135deg,#06b6d4,#7c3aed)}
-		.right{transform:rotateY(90deg) translateZ(100px);background:#7f1d1d}
-		.left{transform:rotateY(-90deg) translateZ(100px);background:#164e63}
-		.top{transform:rotateX(90deg) translateZ(100px);background:#065f46}
-		.bottom{transform:rotateX(-90deg) translateZ(100px);background:#92400e}
-		@keyframes spin{from{transform:rotateX(10deg) rotateY(0deg)}to{transform:rotateX(10deg) rotateY(360deg)}}
-	</style>
-</head>
-<body>
-	<div class="scene">
-		<div class="cube">
-			<div class="face front">Academic+</div>
-			<div class="face back">Student</div>
-			<div class="face right">Admin</div>
-			<div class="face left">Courses</div>
-			<div class="face top">Materials</div>
-			<div class="face bottom">Results</div>
-		</div>
-	</div>
-</body>
-</html>
-```
+ 🌐 Public Website Features
+- 🎨 Modern landing page
+- 👨‍🏫 Faculty showcase
+- 📖 Course pages
+- 🖼️ Gallery section
+- 📞 Contact page
+- 📱 Fully responsive UI
 
-Open the file in a browser to preview a smooth 3D cube animation — perfect for embedding as an animated GIF or recording a short demo to include in this README.
+ 🧠 Tech Stack
+<div align="center">
 
-## Richer option: Basic Three.js starter (WebGL)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js)
+![Express](https://img.shields.io/badge/Express-black?style=for-the-badge&logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Framer Motion](https://img.shields.io/badge/FramerMotion-black?style=for-the-badge&logo=framer)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=jsonwebtokens)
 
-If you want interactive 3D with camera controls and models, Three.js is a small step up. Add this to an HTML page and include `https://unpkg.com/three@0.152.0/build/three.min.js`:
+</div>
 
-```js
-// Minimal Three.js scene (add to an HTML file with a canvas)
-import * as THREE from 'https://unpkg.com/three@0.152.0/build/three.module.js';
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(50, innerWidth/innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setSize(innerWidth, innerHeight); document.body.appendChild(renderer.domElement);
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshNormalMaterial();
-const cube = new THREE.Mesh(geometry, material); scene.add(cube);
-camera.position.z = 3;
-function animate(){requestAnimationFrame(animate); cube.rotation.x += 0.01; cube.rotation.y += 0.02; renderer.render(scene, camera);} animate();
-```
+ 📂 Project Structure
+```bash
+Academic-Plus/
+│
+├── backend/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   ├── seed.js
+│   └── index.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   └── services/
+│   │
+│   └── index.html
+│
+└── README.md
+````
 
-Tip: record the canvas to a GIF (or use Lottie for vector animation) and add the resulting GIF to `assets/readme-hero.gif` for a polished README hero.
+ 🚀 Getting Started
 
----
-
-## Quick Highlights
-
-- Public website with hero, courses, faculties, gallery and contact.
-- Admin panel for managing students, courses, materials, attendance, fees, notifications, and results.
-- Student panel for viewing enrolled materials, payments, attendance and results.
-
-## Full Project Reference
-
-This section contains the original project details so developers can run and extend the app.
-
-### Project layout
-
-```
-backend/
-	controllers/
-	middleware/
-	models/
-	routes/
-	uploads/
-	index.js
-	package.json
-	seed.js
-
-frontend/
-	public/
-	src/
-		components/
-		context/
-		hooks/
-		pages/
-		services/
-	index.html
-	package.json
-```
-
-### Tech Stack
-
-- Frontend: React, Vite, Tailwind, Framer Motion
-- Backend: Node.js, Express, MongoDB, Mongoose
-
-### Getting Started (short)
-
-1. Clone the repo:
+ 📥 Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Kartikcc123/client-website.git
 cd client-website
 ```
 
-2. Backend install & run:
+ ⚙️ Backend Setup
 
 ```bash
 cd backend
@@ -133,7 +113,13 @@ npm install
 node index.js
 ```
 
-3. Frontend install & run (dev):
+Backend will run on:
+
+```bash
+http://localhost:5000
+```
+
+ 💻 Frontend Setup
 
 ```bash
 cd frontend
@@ -141,54 +127,151 @@ npm install
 npm run dev
 ```
 
-The frontend talks to the backend at `http://localhost:5000/api` by default.
+Frontend will run on:
 
-### Env example (backend/.env)
-
+```bash
+http://localhost:5173
 ```
+
+ 🔐 Environment Variables
+
+Create a `.env` file inside backend folder.
+
+```env
 PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/academic-plus
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=your_secret_key
 ```
 
-### Database seeding
+ 🌱 Database Seeding
 
-From `backend/`:
+Run this command inside backend folder:
 
 ```bash
 node seed.js
 ```
 
-Creates demo accounts:
-- Admin: `admin@academicplus.com` / `admin123`
-- Student: `student@academicplus.com` / `password`
+Demo Accounts:
 
----
+```txt
+Admin:
+admin@academicplus.com
+admin123
 
-## How to add animated media to this README
+Student:
+student@academicplus.com
+password
+```
 
-- Record an in-browser demo as a short GIF using tools like `peek` (Linux), `LICEcap`, or browser extensions.
-- Generate vector animations with Lottie (export from After Effects via Bodymovin) and embed on a website or link the Lottie JSON in the project docs.
-- Include small WebM or MP4 previews for GitHub releases or documentation sites (GitHub README itself prefers GIFs for inline animation).
+ 🎨 UI & Animation Features
 
-## Where to place demo assets
+✨ Smooth animations using Framer Motion
+✨ Modern glassmorphism design
+✨ Responsive mobile-first UI
+✨ Dynamic dashboard experience
+✨ Interactive cards & sections
 
-- Put GIFs or images in `frontend/public/assets/` or `assets/` at the repo root and reference them with relative paths in this README.
-- Add a `readme-demo.html` (local preview file) at the repo root for quick browser previews.
+ 📸 Recommended README Assets
 
----
+Create an `assets/` folder in project root.
 
-## Notes & Future Improvements
+```bash
+assets/
+├── readme-banner.gif
+├── home.png
+├── admin.png
+├── student.png
+```
 
-- Move the API base URL to environment variables in the frontend.
-- Add a small `docs/` folder with recorded GIFs and `readme-demo.html` previews for contributors.
-- Consider a small Netlify/Vercel demo showing the 3D scene and public website.
+You can use:
 
-If you want, I can: add the demo HTML file (`readme-demo.html`), generate a GIF from the frontend demo, or wire a live demo deploy. Tell me which option you prefer and I will implement it.
+* Screenshot tools
+* ScreenToGif
+* OBS Studio
+* LICEcap
 
----
+to create awesome previews.
 
-## Author
+ 🔥 Future Improvements
 
-Built for the Academic Plus management and student learning workflow.
+* 🤖 AI Student Analytics
+* 📹 Live Classes Integration
+* 💬 Real-Time Chat
+* 📱 Mobile Application
+* 🧠 Smart Attendance System
+* ☁️ Cloud Deployment
+* 📈 Performance Graphs
 
+ 🌍 Deployment
+
+ Frontend
+
+* Vercel
+* Netlify
+
+ Backend
+
+* Render
+* Railway
+* VPS
+
+ 📊 GitHub Stats
+
+<div align="center">
+
+![Kartik's GitHub stats](https://github-readme-stats.vercel.app/api?username=Kartikcc123\&show_icons=true\&theme=tokyonight)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Kartikcc123\&layout=compact\&theme=tokyonight)
+
+</div>
+
+ 🐍 Contribution Snake
+
+<div align="center">
+
+![snake gif](https://github.com/Kartikcc123/Kartikcc123/blob/output/github-contribution-grid-snake.svg)
+
+</div>
+
+ 👨‍💻 Developer
+
+<div align="center">
+
+<img src="https://github.com/Kartikcc123.png" width="120" style="border-radius:50%" />
+
+ Kartik Agarwal
+
+ 🚀 MERN Developer | ☁️ Cloud Learner | 🤖 AI Enthusiast
+
+</div>
+
+ 🤝 Contributing
+
+Contributions are always welcome!
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit changes
+4. Push to branch
+5. Open a Pull Request
+
+ ⭐ Support
+
+If you like this project:
+
+⭐ Star this repository
+🍴 Fork this project
+📢 Share with developers
+
+ 📜 License
+
+This project is licensed under the MIT License.
+
+<div align="center">
+
+ 💙 Thank You For Visiting
+
+ Made with ❤️ by Kartik Agarwal
+
+</div>
+```
