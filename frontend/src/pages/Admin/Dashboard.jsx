@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { Users, BookOpen, Clock, TrendingUp, IndianRupee, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import api from '../../services/api';
 
@@ -70,7 +70,7 @@ const AdminDashboard = () => {
       )}
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-4">
             <div className="rounded-2xl bg-blue-50 p-3 text-blue-600">
               <Users className="h-6 w-6" />
@@ -79,9 +79,9 @@ const AdminDashboard = () => {
           </div>
           <p className="text-4xl font-bold text-slate-800">{loading ? '...' : totals.students || 0}</p>
           <p className="mt-2 flex items-center gap-1 text-sm font-medium text-green-500"><TrendingUp className="h-4 w-4" /> {totals.studentsWithAccess || 0} currently have dashboard access</p>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-4">
             <div className="rounded-2xl bg-purple-50 p-3 text-purple-600">
               <BookOpen className="h-6 w-6" />
@@ -90,9 +90,9 @@ const AdminDashboard = () => {
           </div>
           <p className="text-4xl font-bold text-slate-800">{loading ? '...' : totals.courses || 0}</p>
           <p className="mt-2 text-sm font-medium text-slate-400">{totals.materials || 0} study materials published</p>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-4">
             <div className="rounded-2xl bg-green-50 p-3 text-green-600">
               <IndianRupee className="h-6 w-6" />
@@ -101,9 +101,9 @@ const AdminDashboard = () => {
           </div>
           <p className="text-4xl font-bold text-slate-800">{loading ? '...' : `Rs ${totals.totalRevenue || 0}`}</p>
           <p className="mt-2 flex items-center gap-1 text-sm font-medium text-green-500"><TrendingUp className="h-4 w-4" /> Based on paid fee records</p>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-4">
             <div className="rounded-2xl bg-orange-50 p-3 text-orange-600">
               <Clock className="h-6 w-6" />
@@ -112,7 +112,7 @@ const AdminDashboard = () => {
           </div>
           <p className="text-4xl font-bold text-slate-800">{loading ? '...' : `${totals.averageAttendance || 0}%`}</p>
           <p className="mt-2 text-sm font-medium text-slate-400">Calculated from saved attendance records</p>
-        </motion.div>
+        </Motion.div>
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">

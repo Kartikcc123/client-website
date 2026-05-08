@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,7 @@ const HeroSection = () => {
       ></div>
       <div className="absolute inset-0 bg-black/65 z-0"></div>
       
-      <motion.div 
+      <Motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
             Get Started
           </a>
         </div>
-      </motion.div>
+      </Motion.div>
     </section>
   );
 };

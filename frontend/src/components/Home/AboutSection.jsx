@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Target, Users, BookOpen } from 'lucide-react';
 import directorImage from '../../assets/Director.jpeg';
 
@@ -9,7 +9,7 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-16">
           
-          <motion.div 
+          <Motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -35,9 +35,9 @@ const AboutSection = () => {
               <div className="text-4xl font-bold font-serif">15+</div>
               <div className="text-sm font-medium uppercase tracking-wider">Years of Excellence</div>
             </div>
-          </motion.div>
+          </Motion.div>
 
-          <motion.div 
+          <Motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ const AboutSection = () => {
                 </div>
               </li>
             </ul>
-          </motion.div>
+          </Motion.div>
         </div>
       </div>
     </section>

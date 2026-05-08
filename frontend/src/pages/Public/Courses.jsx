@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { BookOpen, Clock, IndianRupee, CheckCircle, ArrowRight, X, Sparkles } from 'lucide-react';
 import api from '../../services/api';
 
@@ -76,7 +76,7 @@ const Courses = () => {
         ></div>
         <div className="absolute inset-0 z-0 bg-[linear-gradient(135deg,rgba(24,24,27,0.88),rgba(120,53,15,0.72),rgba(234,179,8,0.34))]"></div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -90,7 +90,7 @@ const Courses = () => {
           <p className="mx-auto max-w-2xl text-lg font-light text-gray-200 md:text-xl">
             {courseCountLabel}. Explore a course, open the full details card, and then continue to enroll.
           </p>
-        </motion.div>
+        </Motion.div>
       </section>
 
       <section className="bg-stone-50 py-24">
@@ -98,7 +98,7 @@ const Courses = () => {
           {courses.length ? (
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
               {courses.map((course, idx) => (
-                <motion.div
+                <Motion.div
                   key={course._id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -150,7 +150,7 @@ const Courses = () => {
                       Learn More <ArrowRight className="h-5 w-5" />
                     </button>
                   </div>
-                </motion.div>
+                </Motion.div>
               ))}
             </div>
           ) : (

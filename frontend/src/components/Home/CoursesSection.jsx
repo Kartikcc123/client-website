@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Clock, IndianRupee } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import api from '../../services/api';
 
 const fallbackImages = [
@@ -29,7 +29,7 @@ const CoursesSection = () => {
   return (
     <section id="courses" className="bg-stone-50 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -39,13 +39,13 @@ const CoursesSection = () => {
           <h2 className="mb-4 font-serif text-4xl font-bold text-slate-900">Our Core Programs</h2>
           <div className="mx-auto mb-6 h-1 w-16 bg-amber-500"></div>
           <p className="text-lg text-gray-600">These courses are loaded directly from the admin panel and updated live on the website.</p>
-        </motion.div>
+        </Motion.div>
 
         {courses.length ? (
           <>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {courses.slice(0, 3).map((course, idx) => (
-                <motion.div
+                <Motion.div
                   key={course._id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ const CoursesSection = () => {
                       Learn More <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                   </div>
-                </motion.div>
+                </Motion.div>
               ))}
             </div>
 

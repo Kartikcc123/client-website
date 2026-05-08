@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 
 const testimonials = [
@@ -12,7 +12,7 @@ const TestimonialsSection = () => {
   return (
     <section className="py-24 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -20,11 +20,11 @@ const TestimonialsSection = () => {
         >
           <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">What Our Students Say</h2>
           <div className="w-16 h-1 bg-amber-500 mx-auto mb-6"></div>
-        </motion.div>
+        </Motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((test, idx) => (
-            <motion.div 
+            <Motion.div 
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
                 <h4 className="font-bold text-slate-900 font-serif text-xl">{test.name}</h4>
                 <span className="text-amber-700 text-sm font-medium uppercase tracking-wider">{test.role}</span>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

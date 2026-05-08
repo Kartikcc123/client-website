@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { BookOpen, IndianRupee, CheckCircle, FileText, PlayCircle, DownloadCloud, TrendingUp, Clock3, Sparkles } from 'lucide-react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import api from '../../services/api';
 import useRefreshOnFocus from '../../hooks/useRefreshOnFocus';
 
@@ -80,7 +80,7 @@ const StudentDashboard = () => {
       </section>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="group relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="group relative overflow-hidden rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="absolute right-0 top-0 h-32 w-32 -translate-y-8 translate-x-8 rounded-full bg-blue-500/6 transition group-hover:scale-110"></div>
           <div className="mb-4 flex items-center gap-3">
             <div className="rounded-2xl bg-blue-50 p-3 text-blue-600">
@@ -97,9 +97,9 @@ const StudentDashboard = () => {
               ))}
             </div>
           )}
-        </motion.div>
+        </Motion.div>
 
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="flex items-center justify-between rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="flex items-center justify-between rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div>
             <div className="mb-2 flex items-center gap-3">
               <div className="rounded-2xl bg-green-50 p-3 text-green-600">
@@ -116,9 +116,9 @@ const StudentDashboard = () => {
               <circle cx="48" cy="48" r="40" className="stroke-green-500" strokeWidth="8" fill="none" strokeDasharray="251" strokeDashoffset={251 - (251 * data.attendancePercentage) / 100} strokeLinecap="round" />
             </svg>
           </div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
+        <Motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-sm">
           <div className="mb-4 flex items-center gap-3">
             <div className="rounded-2xl bg-red-50 p-3 text-red-600">
               <IndianRupee className="h-6 w-6" />
@@ -129,7 +129,7 @@ const StudentDashboard = () => {
           <div className={`mt-4 inline-flex rounded-full px-3 py-1 text-xs font-medium ${latestUnpaidFee ? 'bg-red-100 text-red-700' : 'bg-emerald-100 text-emerald-700'}`}>
             {latestUnpaidFee ? `${latestUnpaidFee.month} pending` : 'No pending fees'}
           </div>
-        </motion.div>
+        </Motion.div>
       </div>
 
       <section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { Video, BookOpen, CheckCircle, HelpCircle, Activity } from 'lucide-react';
 
 const features = [
@@ -14,7 +14,7 @@ const FeaturesSection = () => {
   return (
     <section id="features" className="py-24 bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -23,11 +23,11 @@ const FeaturesSection = () => {
           <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">Why Choose Academic Plus?</h2>
           <div className="w-16 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">We provide everything a student needs in one ecosystem.</p>
-        </motion.div>
+        </Motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((feat, idx) => (
-            <motion.div 
+            <Motion.div 
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
               </div>
               <h3 className="text-xl font-bold font-serif text-slate-900 mb-3">{feat.title}</h3>
               <p className="text-gray-600 text-sm">{feat.desc}</p>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
       </div>

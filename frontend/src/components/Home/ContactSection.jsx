@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
 
 const ContactSection = () => {
@@ -10,7 +10,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <Motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -19,7 +19,7 @@ const ContactSection = () => {
           <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4">Get In Touch</h2>
           <div className="w-16 h-1 bg-amber-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">Have questions? Reach out to us or visit our campus.</p>
-        </motion.div>
+        </Motion.div>
         
         <div className="flex flex-col lg:flex-row gap-12 bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100">
           
