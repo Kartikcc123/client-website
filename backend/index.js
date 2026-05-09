@@ -15,6 +15,11 @@ const allowedOrigins = (process.env.CORS_ORIGIN || '')
   .map((origin) => origin.trim())
   .filter(Boolean);
 
+// Always allow the new frontend link explicitly
+if (!allowedOrigins.includes('https://client-website-hbpb.onrender.com')) {
+  allowedOrigins.push('https://client-website-hbpb.onrender.com');
+}
+
 const corsOptions = {
   origin(origin, callback) {
     // Allow tools like Postman and same-origin server requests.
@@ -49,7 +54,7 @@ const authLimiter = rateLimit({
 });
 
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(apiLimiter);
 app.use('/uploads', express.static('uploads')); // For serving uploaded files
